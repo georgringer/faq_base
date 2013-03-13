@@ -1,0 +1,16 @@
+
+
+<f:groupedFor each="{entries}" as="groupedEntries" groupBy="category" groupKey="category">
+	{category.title}
+
+	<f:for each="{groupedEntries}" as="entry">
+		<div class="faq">
+			<div class="question">{entry.question}</div>
+			<div class="answer">
+				<f:format.html>{entry.answer}</f:format.html>
+			</div>
+
+			<hr />
+		</div>
+	</f:for>
+</f:groupedFor>
